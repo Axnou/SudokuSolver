@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="SudokuSolver:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="527bcce6-13a8-46eb-8a8d-7188195dbbfe" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,9 +21,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -61,6 +66,10 @@
       <screen x="-1920" y="349" width="1920" height="1040" />
     </state>
     <state x="-1506" y="524" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/-1920.349.1920.1040@-1920.349.1920.1040" timestamp="1595331205204" />
+    <state x="1010" y="490" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1595853478854">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="490" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1595853478854" />
     <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1595327528321">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -81,5 +90,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2500" height="398" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1595327287206" />
+    <state x="760" y="274" key="SettingsEditor" timestamp="1595853484030">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="760" y="274" key="SettingsEditor/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1595853484030" />
   </component>
 </project>
