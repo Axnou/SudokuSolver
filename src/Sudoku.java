@@ -6,16 +6,18 @@ public class Sudoku {
                 { 0, 3, 0, 0, 7, 0, 0, 8, 0 }, { 0, 2, 7, 0, 0, 9, 0, 0, 0 }, { 0, 4, 0, 8, 0, 1, 0, 5, 0 } };
 
 
+        System.out.println("Ratkaisematon:");
+        sudokuPrint(sudoku);
         solver(sudoku);
+        System.out.println("");
+        System.out.println("Ratkaistu:");
         sudokuPrint(sudoku);
     }
 
-    //Ratkaisija joka kayttaa backtracking algoritmia. Jotta algoritmi toimii, taytyy ratkaisijan palauttaa totuusarvo
+    //Ratkaisija joka kayttaa backtracking algoritmia. Jotta algoritmi toimii, taytyy ratkaisijan palauttaa totuusarvo.
     public static boolean solver(int[][] sudokuToSolve) {
         Cordinate empty = findEmpty(sudokuToSolve);
         if (empty == null) {
-            //jos yhtään tyhjää paikkaa ei ole palauttaa arvon true,
-            //jolloin ratkaisija-loop purkautuu
             return true;
         }
 
@@ -25,9 +27,6 @@ public class Sudoku {
         for (int i = 1; i <= 9; i++) {
             sudokuToSolve[row][column] = i;
             if (acceptable(sudokuToSolve, row, column, i)) {
-                
-                //Ratkaisija kutsuu itseään, jolloin syntyy ratkaisijoiden loop.
-                //totuusarvojen avulla ratkaisija palaa joko taikaisin edelliseen ratkaisijaan tai kutsuu uuden ratkaisijan seuraavalle sudokun ruudulle
                 if (solver(sudokuToSolve)) {
                     return true;
                 }
@@ -66,7 +65,6 @@ public class Sudoku {
                 }
             }
         }
-        //jos sudokun ehdot täyttyvät palauttaa true
         return true;
     }
 

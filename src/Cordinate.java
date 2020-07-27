@@ -8,12 +8,10 @@ public class Cordinate {
         this.x = givenX;
     }
 
-    //palauttaa sudokutaulukon koordinaatin y (rivin)
     public int getY() {
         return y;
     }
 
-    //palauttaa sudokutaulukon koordinaatin x (sarake)
     public int getX() {
         return x;
     }
