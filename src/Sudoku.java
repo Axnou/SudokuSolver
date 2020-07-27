@@ -16,8 +16,11 @@ public class Sudoku {
 
     //Ratkaisija joka kayttaa backtracking algoritmia. Jotta algoritmi toimii, taytyy ratkaisijan palauttaa totuusarvo.
     public static boolean solver(int[][] sudokuToSolve) {
+
+        //etsii tyhjän
         Cordinate empty = findEmpty(sudokuToSolve);
         if (empty == null) {
+            //jos ei ole tyhjää ruutua, palauttaa true, jolloin loop-purkautuu
             return true;
         }
 
@@ -27,6 +30,8 @@ public class Sudoku {
         for (int i = 1; i <= 9; i++) {
             sudokuToSolve[row][column] = i;
             if (acceptable(sudokuToSolve, row, column, i)) {
+
+                //Jos luku sopii, kutsuu ratkaisijaa uudestaan, jolloin ratkaisija siirtyy ratkaisemaan seuraavaa tyhjää ruutua
                 if (solver(sudokuToSolve)) {
                     return true;
                 }
@@ -35,6 +40,7 @@ public class Sudoku {
                 sudokuToSolve[row][column] = 0;
             }
         }
+        //jos luku ei sovi, palauttaa false, jolloin palataan edelliseen ruutuun
         return false;
     }
 
@@ -65,6 +71,7 @@ public class Sudoku {
                 }
             }
         }
+        //Jos luku täyttää ehdot, palauttaa true
         return true;
     }
 
